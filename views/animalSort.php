@@ -2,7 +2,7 @@
     $animals = array('boa', 'panda', 'alpaca');
 
     function sortPrint(&$array){
-        sort($array);
+        natcasesort($array);
         foreach($array as $element){
             echo ' ' . $element;
         }  echo '<br>';
@@ -13,7 +13,7 @@
         if(!in_array($element, $array)){
             $array[] = $element;
         } else {
-            echo 'Array already contains ' . $element . '<br';
+            echo 'array already contains ' . $element . '<br';
         }
     }
     sortPrint($animals);
